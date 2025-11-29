@@ -38,19 +38,20 @@ class EmailService:
         # URL frontend pour le magic link
         self.frontend_url = os.getenv("FRONTEND_URL", "http://localhost:3000")
     
-    async def send_magic_link(self, to_email: str, magic_token: str) -> bool:
+    async def send_magic_link(self, to_email: str, magic_token: str, locale: str = "fr") -> bool:
         """
         Envoie un magic link pour authentification.
         
         Args:
             to_email: Email du destinataire
             magic_token: Token JWT pour vérification
+            locale: Langue de l'utilisateur (fr, en, he)
             
         Returns:
             True si envoyé avec succès, False sinon
         """
-        # URL complète du magic link
-        magic_url = f"{self.frontend_url}/verify-magic-link?token={magic_token}"
+        # URL complète du magic link (avec locale)
+        magic_url = f"{self.frontend_url}/{locale}/verify-magic-link?token={magic_token}"
         
         subject = "🔐 Connexion à AvaFirst AI"
         

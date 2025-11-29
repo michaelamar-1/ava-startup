@@ -1,13 +1,22 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useSearchParams, useRouter, useParams } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { 
+  createSessionFromTokenResponse,
+  persistSession,
+} from '@/lib/auth/session-client';
+import { useSessionStore } from '@/stores/session-store';
+import { emitTokenChange } from '@/lib/hooks/use-auth-token';
 
 export default function VerifyMagicLinkPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const params = useParams();
+  const locale = (params?.locale as string) || 'fr';
+  const setSession = useSessionStore((state) => state.setSession);
   const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
   const [message, setMessage] = useState('');
 
@@ -30,23 +39,32 @@ export default function VerifyMagicLinkPage() {
       const data = await response.json();
 
       if (response.ok) {
-        // Sauvegarder les tokens
+        // Sauvegarder les tokens (comme login-form.tsx)
         if (typeof window !== 'undefined') {
           localStorage.setItem('access_token', data.access_token);
           localStorage.setItem('refresh_token', data.refresh_token);
+          
+          // ✅ AUSSI stocker dans un cookie pour le middleware Next.js
+          document.cookie = `access_token=${data.access_token}; path=/; max-age=86400; SameSite=Lax`;
+          
+          emitTokenChange(); // ✅ Notifier les autres composants
+          
+          // Créer et persister la session
+          const sessionPayload = createSessionFromTokenResponse(data);
+          setSession(sessionPayload);
+          persistSession(sessionPayload);
         }
         
         setStatus('success');
         setMessage('Connexion réussie ! Redirection...');
         
-        // Rediriger vers le dashboard après 1s
+        // Rediriger vers le dashboard après 1s (avec locale)
         setTimeout(() => {
-          // Check if onboarding is completed
           const onboardingCompleted = data.user?.onboarding_completed;
           if (onboardingCompleted) {
-            router.push('/dashboard');
+            router.push(`/${locale}/dashboard`); // ✅ Avec locale
           } else {
-            router.push('/onboarding');
+            router.push(`/${locale}/onboarding`); // ✅ Avec locale
           }
         }, 1000);
       } else {

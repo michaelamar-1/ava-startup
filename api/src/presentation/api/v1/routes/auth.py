@@ -529,11 +529,12 @@ async def send_magic_link(
     }
     magic_token = jwt.encode(magic_token_payload, SECRET_KEY, algorithm=ALGORITHM)
     
-    # Envoyer l'email
+    # Envoyer l'email (avec locale du user)
     email_service = get_email_service()
     email_sent = await email_service.send_magic_link(
         to_email=user.email,
-        magic_token=magic_token
+        magic_token=magic_token,
+        locale=user.locale or "fr"  # ✅ Passer le locale du user
     )
     
     if not email_sent:

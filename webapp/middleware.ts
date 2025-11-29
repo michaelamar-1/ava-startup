@@ -15,6 +15,8 @@ const PUBLIC_ROUTES = [
   '/signup',
   '/forgot-password',
   '/reset-password',
+  '/verify-magic-link', // ✅ Magic link verification page
+  '/auth', // ✅ Auth pages (sign-in, etc.)
   // Marketing pages (landing, pricing, etc.)
   '/',
 ]
