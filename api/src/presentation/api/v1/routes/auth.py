@@ -598,17 +598,16 @@ async def verify_magic_link(
             detail="Utilisateur introuvable"
         )
     
-    # Créer les tokens de session (longue durée)
+    # Créer les tokens de session (comme login/signup : sub = user.id)
     access_token_payload = {
-        "sub": user.email,
-        "user_id": str(user.id),
+        "sub": str(user.id),  # ✅ ID dans sub (pas email)
+        "email": user.email,
         "exp": datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     }
     access_token = jwt.encode(access_token_payload, SECRET_KEY, algorithm=ALGORITHM)
     
     refresh_token_payload = {
-        "sub": user.email,
-        "user_id": str(user.id),
+        "sub": str(user.id),  # ✅ ID dans sub (pas email)
         "exp": datetime.utcnow() + timedelta(days=REFRESH_TOKEN_EXPIRE_DAYS)
     }
     refresh_token = jwt.encode(refresh_token_payload, SECRET_KEY, algorithm=ALGORITHM)
