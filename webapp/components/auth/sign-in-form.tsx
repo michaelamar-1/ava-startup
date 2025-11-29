@@ -34,6 +34,7 @@ export function SignInForm() {
   const t = useTranslations("auth");
   const [step, setStep] = useState<"magic" | "verify">("magic");
   const [email, setEmail] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const form = useForm<SignInValues>({
     resolver: zodResolver(signInSchema),
@@ -46,11 +47,39 @@ export function SignInForm() {
   });
 
   const handleMagicSubmit = async (values: SignInValues) => {
-    setEmail(values.email);
-    toast(t("magic.success", { defaultValue: "Magic link sent! Check your inbox." }), {
-      description: values.email,
-    });
-    setTimeout(() => setStep("verify"), 400);
+    setIsLoading(true);
+    
+    try {
+      // Appel API backend pour envoyer le magic link
+      const response = await fetch('/api/auth/magic-link/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: values.email }),
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.detail || 'Erreur lors de l\'envoi');
+      }
+      
+      // Succès
+      setEmail(values.email);
+      toast.success(
+        t("magic.success", { defaultValue: "Magic link sent! Check your inbox." }), 
+        { description: values.email }
+      );
+      setTimeout(() => setStep("verify"), 400);
+      
+    } catch (error) {
+      console.error('Magic link error:', error);
+      toast.error(
+        t("magic.error", { defaultValue: "Failed to send magic link" }), 
+        { description: error instanceof Error ? error.message : "Please try again" }
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleTotpSubmit = async (values: TotpValues) => {
@@ -101,8 +130,11 @@ export function SignInForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" size="lg" className="w-full">
-              {t("cta.magic", { defaultValue: "Send magic link" })}
+            <Button type="submit" size="lg" className="w-full" disabled={isLoading}>
+              {isLoading 
+                ? t("cta.sending", { defaultValue: "Sending..." })
+                : t("cta.magic", { defaultValue: "Send magic link" })
+              }
             </Button>
           </form>
         </Form>
