@@ -1,0 +1,960 @@
+{
+  "common": {
+    "appName": "Ava.ai",
+    "tagline": "המזכירה החכמה שבאמת עובדת",
+    "cta": {
+      "primary": "ליצור את אווה שלי",
+      "secondary": "לצפות בהדגמה",
+      "start": "התחלה"
+    },
+    "nav": {
+      "home": "בית",
+      "ava": "Ava Studio",
+      "calls": "שיחות",
+      "inbox": "תיבת משימות",
+      "schedules": "יומנים",
+      "integrations": "אינטגרציות",
+      "phone": "טלפוניה",
+      "billing": "חיוב",
+      "team": "צוות",
+      "settings": "הגדרות",
+      "logs": "לוגים",
+      "contacts": "Contacts"
+    },
+    "status": {
+      "connected": "מחובר",
+      "disconnected": "מנותק",
+      "inProgress": "בתהליך",
+      "actionRequired": "דורש פעולה"
+    }
+  },
+  "nav": {
+    "menu": "פתיחת תפריט",
+    "search": "חיפוש",
+    "searchPlaceholder": "חיפוש פעולה, איש קשר או שיחה...",
+    "command": "חפשו פעולה, איש קשר או מסמך...",
+    "empty": "לא נמצאו תוצאות. נסו מונח אחר.",
+    "goTo": "לעבור אל",
+    "quickActions": "פעולות מהירות",
+    "login": "התחברות"
+  },
+  "actions": {
+    "newTestCall": "להפעיל שיחת בדיקה",
+    "newContact": "ליצור איש קשר",
+    "openBilling": "פתיחת חיוב"
+  },
+  "org": {
+    "switch": "החלפת ארגון",
+    "none": "בחרו סביבת עבודה",
+    "plan": "בחרו תכנית",
+    "search": "חיפוש ארגונים",
+    "empty": "לא נמצאו ארגונים",
+    "actions": "פעולות",
+    "create": "ארגון חדש"
+  },
+  "auth": {
+    "signOut": "התנתקות",
+    "title": "ברוכים השבים",
+    "subtitle": "התחברו עם לינק קסם או ספק זהות מועדף.",
+    "fields": {
+      "email": "אימייל עבודה",
+      "remember": "להישאר מחובר",
+      "remember_hint": "שומר את הסשן פעיל ל-30 יום."
+    },
+    "cta": {
+      "magic": "שלחו לינק קסם"
+    },
+    "magic": {
+      "success": "לינק נשלח! בדקו את תיבת הדואל.",
+      "sent": "שלחנו קישור מאובטח אל {email}."
+    },
+    "totp": {
+      "title": "אימות דו-שלבי",
+      "subtitle": "הזינו את הקוד בן 6 הספרות מאפליקציית האימות.",
+      "token": "קוד אימות",
+      "verify": "אמת קוד",
+      "success": "האימות הצליח. מפנים...",
+      "back": "השתמשו באימייל אחר"
+    },
+    "or": "או המשיכו עם",
+    "oauth": "המשיכו עם {provider}",
+    "policy": "בהמשך אתם מאשרים את התנאים ומדיניות הפרטיות של Ava.ai.",
+    "login": {
+      "title": "ברוכים השבים",
+      "subtitle": "התחברו לחשבון שלכם",
+      "description": "גישה לחשבון AVA שלכם",
+      "noAccount": "עדיין אין לכם חשבון?",
+      "createAccount": "צרו חשבון חינם"
+    }
+  },
+  "marketing": {
+    "features": "יכולות",
+    "pricing": "תמחור",
+    "faq": "שאלות נפוצות",
+    "docs": "תיעוד",
+    "signIn": "התחברות",
+    "privacy": "פרטיות",
+    "terms": "תנאים",
+    "security": "אבטחה",
+    "product": "Product",
+    "resources": "Resources",
+    "support": "Support",
+    "hero": {
+      "badge": "עוזר קולי מבוסס בינה מלאכותית",
+      "title": "פקידת הקבלה הדיגיטלית שלכם",
+      "titleHighlight": "זמינה תמיד",
+      "subtitle": "תכננו, השיקו והפעילו עוזר קולי ברמה אנושית שמקבל שיחות, מסנן לידים ומתאם פגישות תוך דקות."
+    },
+    "socialProof": {
+      "calls": "100+ שיחות טופלו",
+      "setup": "התקנה ב-3 דקות",
+      "available": "זמין 24/7"
+    },
+    "cta": {
+      "signup": "התחילו בחינם",
+      "login": "התחברות",
+      "primary": "התחילו התקנה",
+      "secondary": "שוחחו עם מומחה"
+    },
+    "taglineFooter": "The AI receptionist that captures every opportunity 24/7.",
+    "fallback": {
+      "badge": "Ava Studio",
+      "title": "Your AI receptionist is always available",
+      "subtitle": "Design, launch, and operate a human-level voice assistant that greets callers, qualifies leads, and schedules appointments in minutes.",
+      "primary": "Start now",
+      "secondary": "Watch the demo",
+      "stats": {
+        "calls": {
+          "value": "99.9%",
+          "label": "Calls answered"
+        },
+        "csat": {
+          "value": "4.9/5",
+          "label": "Satisfaction score"
+        },
+        "setup": {
+          "value": "3 min",
+          "label": "Average setup"
+        }
+      }
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "הדף לא נמצא",
+      "description": "הדף שחיפשתם הועבר או אינו זמין.",
+      "cta": "חזרה לדף הבית"
+    }
+  },
+  "onboarding": {
+    "title": "בואו נגדיר את אווה",
+    "subtitle": "אונבורדינג מודרך עם שמירה אוטומטית. אפשר להזמין את הצוות לאחר מכן.",
+    "steps": {
+      "profile": {
+        "title": "פרופיל",
+        "description": "פרטי ארגון והעדפות משפטיות."
+      },
+      "vapi": {
+        "title": "Vapi API",
+        "description": "הגדרת פלטפורמת עוזר קולי."
+      },
+      "ava": {
+        "title": "הפרסונה של אווה",
+        "description": "טון, שפות ומגבלות."
+      },
+      "twilio": {
+        "title": "Twilio",
+        "description": "אינטגרציית ספק טלפוניה."
+      },
+      "telephony": {
+        "title": "טלפוניה",
+        "description": "מספרים, ניתוב וגיבויים."
+      },
+      "integrations": {
+        "title": "אינטגרציות",
+        "description": "יומנים, דואל, CRM ואוטומציה."
+      },
+      "assistant": {
+        "title": "עוזר",
+        "description": "צרו את עוזר ה-AI הראשון שלכם."
+      },
+      "plan": {
+        "title": "תכנית",
+        "description": "בחירת חבילה ומספר רישיונות."
+      },
+      "done": {
+        "title": "השקה",
+        "description": "סקירה אחרונה והרצת בדיקת שיחה."
+      }
+    },
+    "autosave": "שמירה אוטומטית כל 10 שניות. השתמשו ב-⌘K לניווט מהיר.",
+    "shortcuts_info": "השתמשו ב-⌘K לניווט מהיר לכל סעיף.",
+    "shortcuts": "הצג קיצורי דרך",
+    "errors": {
+      "incomplete": "אנא השלימו את השדות הנדרשים.",
+      "launch": "לא ניתן ליצור את העוזר. אנא נסו שוב.",
+      "save": "לא ניתן לשמור כרגע."
+    },
+    "success": {
+      "launch": "🎉 ברוכים הבאים ל-Ava Studio! העוזר שלכם מוכן.",
+      "welcome": "🎉 ברוכים הבאים ל-Ava Studio! השלימו את ההגדרה כדי להפעיל את העוזר."
+    },
+    "actions": {
+      "back": "חזרה",
+      "launch": "השיקו את אווה",
+      "launching": "יוצר את העוזר שלכם...",
+      "complete": "השלמת ההגדרה",
+      "next": "המשך",
+      "skip": "דלג לעת עתה"
+    },
+    "pageTitle": "אונבורדינג אווה",
+    "pageSubtitle": "השלימו את השלבים כדי להפעיל את אווה. תמיד אפשר לחזור אליהם מ-Ava Studio.",
+    "vapi": {
+      "title": "הגדרת Vapi",
+      "description": "הפעילו עוזרים קוליים לעסק שלכם",
+      "continue": "המשך",
+      "info": "Vapi נדרש ליצירת עוזרים קוליים. ניתן להגדיר אותו עכשיו או מאוחר יותר בהגדרות.",
+      "alreadyConfigured": {
+        "title": "Vapi כבר מוגדר!",
+        "description": "האינטגרציה של Vapi.ai פעילה ומוכנה"
+      },
+      "step1": {
+        "title": "⚡ הגדרה מהירה",
+        "description": "הדביקו את המפתח והמשיכו (2 דקות)",
+        "input": {
+          "label": "מפתח API של Vapi",
+          "placeholder": "sk_...",
+          "hint": "קבלו את המפתח מ-vapi.ai dashboard → Settings → API Keys"
+        },
+        "save": "שמירה והמשך",
+        "saving": "שומר...",
+        "errors": {
+          "required": "נא להזין את מפתח API של Vapi",
+          "save": "שמירת מפתח Vapi נכשלה"
+        },
+        "success": "✅ Vapi הוגדר בהצלחה!"
+      },
+      "step2": {
+        "title": "⚙️ הגדרה מפורטת",
+        "description": "מדריך מלא עם צילומי מסך וטיפים",
+        "action": "עבור להגדרות"
+      },
+      "step3": {
+        "title": "⏭️ דלג לעכשיו",
+        "description": "ניתן להגדיר Vapi מאוחר יותר בהגדרות",
+        "action": "דלג על שלב זה",
+        "skipped": "הגדרת Vapi דולגה. ניתן להוסיף אותה מאוחר יותר בהגדרות."
+      }
+    },
+    "twilio": {
+      "title": "הגדרת Twilio",
+      "description": "חברו מספרי טלפון לעוזרים שלכם",
+      "continue": "המשך",
+      "hint": "אופציונלי: Twilio מאפשר לחבר מספרי טלפון אמיתיים. ניתן לדלג ולהוסיף מאוחר יותר.",
+      "alreadyConfigured": {
+        "title": "Twilio כבר מוגדר!",
+        "description": "האינטגרציה של Twilio פעילה"
+      },
+      "info": {
+        "title": "למה להגדיר Twilio?",
+        "benefit1": "חיבור מספרי טלפון אמיתיים לעוזרים שלכם",
+        "benefit2": "קבלה ושיחות אוטומטיות",
+        "benefit3": "שליטה מלאה בטלפוניה שלכם"
+      },
+      "configure": {
+        "action": "הגדרת Twilio"
+      },
+      "skip": {
+        "action": "דלג לעכשיו",
+        "message": "הגדרת Twilio דולגה. ניתן להוסיף אותה מאוחר יותר בהגדרות."
+      }
+    },
+    "assistant": {
+      "title": "צרו את העוזר הראשון שלכם",
+      "description": "בואו נחיה את עוזר ה-AI שלכם",
+      "back": "חזרה",
+      "blocked": {
+        "title": "נדרשת הגדרת Vapi",
+        "description": "עליכם להגדיר Vapi לפני יצירת עוזר. אנא חזרו אחורה והשלימו את שלב Vapi.",
+        "action": "חזרה ל-Vapi",
+        "vapiRequired": "Vapi חייב להיות מוגדר כדי ליצור עוזר"
+      },
+      "preview": {
+        "title": "✅ Vapi מוגדר!",
+        "description": "אתם מוכנים ליצור את העוזר הראשון שלכם"
+      },
+      "form": {
+        "name": {
+          "label": "שם העוזר",
+          "placeholder": "לדוגמה: תמיכה, מכירות...",
+          "hint": "אפשר להתאים אישית את הקול והאישיות מאוחר יותר",
+          "error": "נא להזין שם עוזר (לפחות 2 תווים)"
+        },
+        "voice": {
+          "label": "קול",
+          "hint": "ניתן לשנות את הקול מאוחר יותר בהגדרות העוזר"
+        },
+        "create": "✨ צור את העוזר שלי",
+        "creating": "יוצר...",
+        "error": "יצירת העוזר נכשלה. אנא נסו שוב."
+      },
+      "defaults": {
+        "instructions": "אתה עוזר AI מועיל. היה מקצועי, ידידותי וקצר.",
+        "firstMessage": "שלום! אני {name}. איך אוכל לעזור לך היום?",
+        "model": "מודל",
+        "temperature": "טמפרטורה"
+      },
+      "success": {
+        "created": "🎉 העוזר '{name}' נוצר בהצלחה!"
+      }
+    }
+  },
+  "dashboardPage": {
+    "assistants": {
+      "title": "העוזרות שלך",
+      "subtitle": "פעילות",
+      "loading": "טוען...",
+      "empty": "אין עוזרות עדיין",
+      "configure": "הגדר",
+      "alerts": {
+        "notConfigured": "קונפיגורציית Vapi חסרה. הוסיפו מפתח API תקף לסנכרון עוזרות.",
+        "fetchFailed": "לא ניתן לטעון את העוזרות כרגע.",
+        "parseFailed": "התשובה משירות העוזרות לא תקינה.",
+        "empty": "אין עוזרות מסונכרנות עדיין."
+      }
+    },
+    "cta": "פתיחת סטודיו העוזרות",
+    "title": "לוח מחוונים",
+    "subtitle": "ברוך הבא! הנה מה שקורה עם העוזרות של Ava.",
+    "loading": "טוען את לוח המחוונים...",
+    "error": "אירעה שגיאה בטעינת לוח המחוונים",
+    "stats": {
+      "totalCalls": "סה\"כ שיחות",
+      "activeUsers": "משתמשים פעילים",
+      "avgDuration": "משך ממוצע",
+      "successRate": "שיעור הצלחה",
+      "totalCost": "עלות"
+    },
+    "statsHelpers": {
+      "totalCalls": "7 הימים האחרונים",
+      "avgDuration": "דקות לכל שיחה",
+      "successRate": "שיחות ללא הסלמה",
+      "totalCost": "תקופת החיוב הנוכחית"
+    },
+    "quick": {
+      "title": "פעולות מהירות",
+      "viewAnalytics": "צפייה בניתוחים",
+      "manageAssistants": "ניהול עוזרות",
+      "newContact": "איש קשר חדש",
+      "testCall": "שיחת בדיקה"
+    },
+    "activity": {
+      "title": "סקירת פעילות",
+      "subtitle": "עקבו אחרי שיחות וביצועים בזמן אמת"
+    },
+    "recent": {
+      "title": "שיחות אחרונות",
+      "loading": "טוען...",
+      "empty": "אין שיחות עדיין",
+      "unknownNumber": "מספר לא ידוע",
+      "unknownDuration": "משך לא זמין",
+      "unknownTime": "שעה לא זמינה",
+      "noTranscript": "אין תמלול זמין",
+      "viewContact": "פתח את כרטיס איש הקשר עבור {name}",
+      "view": "צפה",
+      "send": "שלח תמלול במייל",
+      "free": "ללא עלות",
+      "toastSuccess": "התמלול נשלח במייל!",
+      "toastError": "שליחת התמלול נכשלה",
+      "seeAll": "לכל השיחות"
+    }
+  },
+  "assistantsPage": {
+    "hero": {
+      "badge": "סטודיו לעוזרת",
+      "title": "עצבו את עוזרות Ava בדיוק לצרכים שלכם",
+      "subtitle": "{count, plural, =0 {התחילו ביצירת העוזרת הקולית הראשונה שלכם.} one {עוזרת אחת מוכנה לענות למתקשרים.} other {{countFormatted} עוזרות מוכנות לענות למתקשרים.}}",
+      "actions": {
+        "create": "עוזרת חדשה",
+        "library": "ספריית פלייבוקים"
+      },
+      "metrics": {
+        "total": "{count, plural, =0 {אין עוזרות עדיין} one {עוזרת אחת מוגדרת} other {{countFormatted} עוזרות מוגדרות}}"
+      }
+    },
+    "library": {
+      "title": "ספריית העוזרות",
+      "subtitle": "עברו בין פרסונות ובחרו אחת לעריכה בבונה.",
+      "count": "{count, plural, =0 {אין עוזרות} one {עוזרת אחת} other {{countFormatted} עוזרות}}",
+      "select": "עריכה בבונה",
+      "active": "פעילה",
+      "empty": {
+        "title": "עוד לא יצרתם עוזרת",
+        "subtitle": "צרו כמה פרסונות שתרצו. לכל עוזרת מוגדר טון, תסריט וקול משלה.",
+        "cta": "צרו עוזרת ראשונה"
+      },
+      "warnings": {
+        "notConfigured": "התחברו לחשבון Vapi כדי לטעון עוזרות קיימות.",
+        "fetchFailed": "לא הצלחנו להגיע לשירות העוזרות כרגע.",
+        "parseFailed": "השירות החזיר מבנה בלתי צפוי.",
+        "empty": "Vapi עדיין לא החזיר עוזרות עבורכם."
+      },
+      "meta": {
+        "unavailable": "תאריך יצירה לא זמין"
+      }
+    },
+    "designer": {
+      "title": "בונה העוזרת",
+      "subtitle": "כווננו פרסונה, תסריט, קול, ניתוב ואינטגרציות עבור העוזרת שבחרתם.",
+      "helper": "בחרו עוזרת בעמודה השמאלית כדי לקשר אותה, ואז שמרו כדי לדחוף את העדכונים ל-Vapi ולמתקשרים מיד."
+    }
+  },
+  "settingsPage": {
+    "movedNotice": {
+      "title": "מחפשים את הגדרות הסטודיו?",
+      "subtitle": "יצירת העוזרות וההתאמות עברו לעמוד העוזרות.",
+      "cta": "פתחו את סטודיו העוזרות"
+    },
+    "header": {
+      "title": "Settings",
+      "subtitle": "Manage your personal details and configure your Ava studio."
+    },
+    "tabs": {
+      "profile": "Profile",
+      "studio": "Studio settings",
+      "vapi": "אינטגרציית Vapi",
+      "twilio": "אינטגרציית Twilio",
+      "email": "שליחת מייל"
+    },
+    "profile": {
+      "title": "User profile",
+      "description": "Your details appear in notifications and customer communications.",
+      "form": {
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "phonePlaceholder": "+1 415 555 0100",
+        "locale": "Default language"
+      },
+      "actions": {
+        "reset": "Reset",
+        "save": "Save",
+        "saving": "Saving..."
+      },
+      "messages": {
+        "success": "Profile updated successfully",
+        "error": "Unable to update profile",
+        "sessionExpired": "Session expired. Please sign in again."
+      },
+      "errors": {
+        "nameMin": "Name must contain at least 2 characters",
+        "nameMax": "Name cannot exceed 100 characters",
+        "email": "Please enter a valid email",
+        "phone": "Provide an international number (+1 ...)",
+        "locale": "Please select a language"
+      }
+    },
+    "studio": {
+      "title": "Studio settings",
+      "description": "Define your organisation identity and Ava personality.",
+      "refresh": "Refresh",
+      "loading": "Loading studio configuration…",
+      "error": "We couldn't load the configuration. Please try again.",
+      "form": {
+        "organizationName": "Organization name",
+        "adminEmail": "Admin email",
+        "timezone": "Timezone",
+        "language": "Primary language",
+        "persona": "Ava persona",
+        "tone": "Voice tone",
+        "guidelines": "Instructions & guidelines",
+        "phoneNumber": "Main number",
+        "businessHours": "Business hours",
+        "fallbackEmail": "Fallback email",
+        "summaryEmail": "Summary email",
+        "smtpServer": "SMTP server",
+        "smtpPort": "SMTP port",
+        "smtpUsername": "SMTP username",
+        "smtpPassword": "SMTP password"
+      },
+      "smtpDescription": "Configure the sender for automated reports and notifications.",
+      "actions": {
+        "reset": "Reset",
+        "save": "Save",
+        "saving": "Saving..."
+      },
+      "messages": {
+        "success": "Studio configuration updated successfully",
+        "error": "Unable to save configuration"
+      },
+      "errors": {
+        "required": "Please fill in this field",
+        "email": "Enter a valid email"
+      },
+      "options": {
+        "timezone": {
+          "europe/paris": "Europe / Paris",
+          "america/new_york": "America / New York",
+          "asia/tokyo": "Asia / Tokyo"
+        },
+        "language": {
+          "fr": "French",
+          "en": "English",
+          "es": "Spanish"
+        },
+        "persona": {
+          "secretary": "Executive assistant",
+          "concierge": "Premium concierge",
+          "sdr": "Sales development",
+          "cs": "Customer success"
+        },
+        "tone": {
+          "warm": "Warm",
+          "professional": "Professional",
+          "energetic": "Energetic"
+        }
+      }
+    },
+    "vapi": {
+      "title": "הגדרות Vapi.ai",
+      "subtitle": "הגדירו את מפתח ה-API האישי שלכם כדי להפעיל עוזרות קוליות AI",
+      "status": {
+        "configured": "✅ מוגדר",
+        "notConfigured": "⚠️ לא מוגדר",
+        "notConfiguredDesc": "הוסיפו את מפתח ה-API כדי לפתוח תכונות Vapi",
+        "keyPreview": "מפתח"
+      },
+      "form": {
+        "label": "מפתח API של Vapi",
+        "description": "מפתח ה-API האישי שלכם ב-Vapi.ai (מתחיל ב-sk_)",
+        "save": "שמירה",
+        "saving": "שומר...",
+        "delete": "מחיקה"
+      },
+      "guide": {
+        "title": "איך להשיג את מפתח ה-API?",
+        "step1": "כנסו ל-vapi.ai וצרו חשבון חינם",
+        "step2": "עברו להגדרות → מפתחות API",
+        "step3": "לחצו על 'צור מפתח API חדש'",
+        "step4": "העתיקו והדביקו את המפתח למעלה",
+        "goToVapi": "פתיחת לוח הבקרה של Vapi"
+      },
+      "benefits": {
+        "scalable": "סקלביליות אינסופית",
+        "secure": "מאובטח ופרטי",
+        "unlimited": "ללא הגבלות"
+      },
+      "success": {
+        "saved": "מפתח ה-API נשמר!",
+        "savedDesc": "האינטגרציה עם Vapi.ai פעילה כעת",
+        "deleted": "מפתח ה-API נמחק",
+        "deletedDesc": "תכונות Vapi הושבתו",
+        "copied": "הקישור הועתק ללוח!"
+      },
+      "errors": {
+        "emptyKey": "אנא הזינו מפתח API",
+        "invalidFormat": "פורמט מפתח API לא תקין",
+        "invalidFormatDesc": "מפתחות Vapi מתחילים ב-'sk_'",
+        "noAuth": "נדרש אימות",
+        "saveFailed": "שמירת מפתח ה-API נכשלה",
+        "saveFailedDesc": "אנא נסו שוב",
+        "deleteFailed": "מחיקת מפתח ה-API נכשלה"
+      },
+      "confirm": {
+        "delete": "האם אתם בטוחים שברצונכם למחוק את מפתח ה-API של Vapi? פעולה זו תשבית את כל תכונות Vapi."
+      }
+    },
+    "twilio": {
+      "title": "הגדרת Twilio",
+      "description": "הגדרת אישורי Twilio האישיים שלך לחיבור מספרי טלפון",
+      "status": {
+        "configured": "✅ מוגדר",
+        "notConfigured": "⚠️ לא מוגדר"
+      },
+      "currentConfig": {
+        "title": "הגדרות נוכחיות",
+        "accountSid": "Account SID",
+        "phoneNumber": "מספר טלפון"
+      },
+      "guide": {
+        "title": "כיצד לקבל את אישורי Twilio שלך?",
+        "step1": "צרו חשבון חינם ב-twilio.com",
+        "step2": "עברו ל-Console → Account → API Keys & Tokens",
+        "step3": "העתיקו את ה-Account SID וה-Auth Token שלכם",
+        "openTwilio": "פתיחת קונסולת Twilio"
+      },
+      "form": {
+        "accountSid": "Account SID",
+        "authToken": "Auth Token",
+        "phoneNumber": "מספר Twilio",
+        "optional": "אופציונלי",
+        "save": "שמירת אישורים",
+        "saving": "שומר...",
+        "delete": "מחיקת אישורים",
+        "deleting": "מוחק..."
+      },
+      "benefits": {
+        "scalable": {
+          "title": "בלתי מוגבל",
+          "description": "חשבון Twilio משלך, מספרי טלפון בלתי מוגבלים"
+        },
+        "secure": {
+          "title": "מאובטח ופרטי",
+          "description": "האישורים שלך, מאוחסנים בבטחה במסד הנתונים שלך"
+        },
+        "unlimited": {
+          "title": "ללא הגבלות",
+          "description": "קנו ונהלו כמה שתרצו מספרים"
+        }
+      },
+      "success": {
+        "credentialsSaved": "אישורי Twilio נשמרו!",
+        "credentialsDeleted": "אישורי Twilio נמחקו"
+      },
+      "errors": {
+        "missingFields": "אנא מלאו את כל השדות הנדרשים",
+        "invalidAccountSid": "Account SID חייב להתחיל ב-'AC'",
+        "invalidPhoneFormat": "מספר הטלפון חייב להיות בפורמט E.164 (לדוגמה: +972501234567)",
+        "saveFailed": "שמירת אישורי Twilio נכשלה",
+        "deleteFailed": "מחיקת אישורי Twilio נכשלה"
+      },
+      "confirmDelete": "האם אתם בטוחים שברצונכם למחוק את אישורי Twilio שלכם? פעולה זו תשבית את תכונות מספרי הטלפון."
+    }
+  },
+  "sidebarNav": {
+    "dashboard": "לוח מחוונים",
+    "assistants": "עוזרים",
+    "contacts": "אנשי קשר",
+    "calls": "Calls",
+    "profile": "פרופיל"
+  },
+  "sidebarTip": {
+    "title": "🎯 טיפ",
+    "body": "לחצו ‎⌘K כדי לפתוח את חלונית הפקודות ולהתקדם מהר יותר."
+  },
+  "contactsPage": {
+    "title": "אנשי קשר",
+    "subtitle": "{contacts} אנשי קשר • {calls} שיחות בסך הכל",
+    "searchPlaceholder": "חיפוש לפי שם או מספר...",
+    "sort": {
+      "recent": "שיחה אחרונה",
+      "frequent": "הכי הרבה שיחות",
+      "oldest": "שיחה ראשונה"
+    },
+    "email": {
+      "title": "שליחת מיילים ממותגים",
+      "description": "שלחו תמלולים והתראות ישירות מהחשבון שלכם ב‑Google Workspace או Outlook.",
+      "status": {
+        "connected": "השולח מאומת",
+        "missing": "נדרשת הגדרה",
+        "caption": "השתמשו בסיסמה ייעודית או ב‑SMTP OAuth כדי לאפשר ל‑Ava לשלוח במקומכם."
+      },
+      "form": {
+        "fallbackEmail": "נמען חירום",
+        "summaryEmail": "סיכום יומי",
+        "smtpTitle": "פרטי SMTP",
+        "providerHint": "השתמשו בשרת ה‑SMTP של הארגון (Google, Microsoft 365, Fastmail ועוד)",
+        "smtpServer": "שרת SMTP",
+        "smtpPort": "פורט",
+        "smtpUsername": "שם משתמש",
+        "smtpPassword": "סיסמת אפליקציה / App password"
+      },
+      "actions": {
+        "save": "שמירת השולח",
+        "reset": "איפוס"
+      },
+      "messages": {
+        "success": "הגדרות המייל נשמרו",
+        "error": "שמירת הגדרות המייל נכשלה"
+      },
+      "errors": {
+        "email": "הזינו כתובת מייל תקינה",
+        "port": "הפורט חייב להכיל ספרות בלבד",
+        "smtpIncomplete": "מלאו שרת, פורט, שם משתמש וסיסמת אפליקציה."
+      },
+      "guides": {
+        "google": {
+          "title": "Google Workspace / Gmail",
+          "description": "צרו סיסמת אפליקציה ייעודית והפעילו SMTP relay.",
+          "linkLabel": "פתיחת Google Admin",
+          "steps": {
+            "step1": "היכנסו ל‑Google Admin → אבטחה → App passwords (או https://myaccount.google.com/apppasswords).",
+            "step2": "צרו סיסמת אפליקציה עבור “Mail” ושמרו את הקוד בן 16 הספרות.",
+            "step3": "הגדירו smtp.gmail.com פורט 587, משתמש = כתובת מלאה, סיסמה = הקוד החדש.",
+            "step4": "ודאו שה‑SMTP relay מותר עבור החשבון או שירות השליחה."
+          }
+        },
+        "outlook": {
+          "title": "Microsoft 365 / Outlook",
+          "description": "אפשרו SMTP מאומת עבור תיבת הדואר הארגונית.",
+          "linkLabel": "מדריך Microsoft",
+          "steps": {
+            "step1": "Microsoft 365 Admin → Users → בחרו את התיבה המתאימה.",
+            "step2": "בקטגוריית Mail → Mail apps הפעילו “Authenticated SMTP”.",
+            "step3": "הגדירו smtp.office365.com פורט 587, משתמש = כתובת התיבה, סיסמה = סיסמת החשבון או סיסמת אפליקציה.",
+            "step4": "אם יש MFA, צרו סיסמת אפליקציה ב‑https://portal.office.com/account/#security."
+          }
+        }
+      }
+    },
+    "card": {
+      "callCount": "{count, plural, one {שיחה אחת} other {# שיחות}}",
+      "averageDuration": "משך ממוצע",
+      "totalDuration": "משך מצטבר",
+      "lastContact": "מגע אחרון",
+      "unknownDate": "תאריך לא ידוע",
+      "unknownDuration": "—",
+      "unknownNumber": "מספר לא ידוע"
+    },
+    "detail": {
+      "back": "חזרה לאנשי קשר",
+      "badge": "פרופיל איש קשר",
+      "unknownPhone": "מספר לא זמין",
+      "alias": {
+        "add": "הוספת שם",
+        "edit": "עריכת שם",
+        "remove": "הסרת שם",
+        "save": "שמירה",
+        "cancel": "ביטול",
+        "placeholder": "שם פרטי ומשפחה"
+      },
+      "metrics": {
+        "callCount": "שיחות",
+        "totalDuration": "משך מצטבר",
+        "averageDuration": "משך ממוצע",
+        "lastCall": "שיחה אחרונה",
+        "firstCall": "שיחה ראשונה",
+        "unknown": "—"
+      },
+      "timeline": {
+        "title": "היסטוריית שיחות",
+        "subtitle": "{count, plural, one {שיחה אחת מתועדת} other {‏# שיחות מתועדות}}",
+        "empty": "עדיין אין שיחות מתועדות לאיש קשר זה.",
+        "viewTranscript": "הצג תמלול",
+        "hideTranscript": "הסתר תמלול",
+        "loadingTranscript": "טוען תמלול...",
+        "noTranscript": "אין תמלול זמין לשיחה זו.",
+        "unknownDate": "תאריך לא ידוע",
+        "unknownDuration": "—",
+        "unknownCost": "עלות לא ידועה",
+        "unknownAssistant": "עוזרת לא ידועה",
+        "free": "ללא עלות",
+        "delete": "מחיקת שיחה",
+        "deleting": "מוחק…",
+        "deleteSuccess": "השיחה נמחקה",
+        "deleteError": "לא ניתן למחוק את השיחה",
+        "loadMore": "טען שיחות נוספות"
+      },
+      "notFound": {
+        "title": "עדיין לא מצאנו את איש הקשר הזה",
+        "subtitle": "בצעו שיחה או רעננו כדי לסנכרן את הפעילות האחרונה."
+      }
+    },
+    "emptyTitle": "אין אנשי קשר עדיין",
+    "emptyDescription": "אנשי הקשר שלכם יופיעו כאן ברגע שתתחילו לקבל שיחות."
+  },
+  "localeSwitcher": {
+    "ariaLabel": "Change language",
+    "active": "Active"
+  },
+  "callsPage": {
+    "title": "Calls",
+    "subtitle": "{count} calls analysed • New calls stream in real time",
+    "searchPlaceholder": "Search by phone, transcript, or ID...",
+    "statusPlaceholder": "Filter by status",
+    "duration": "{minutes}m {seconds}s",
+    "unknownNumber": "Unknown number",
+    "noTranscript": "No transcript available",
+    "empty": "No calls match this filter.",
+    "status": {
+      "any": "All statuses",
+      "in-progress": "In progress",
+      "ended": "Ended",
+      "failed": "Failed",
+      "completed": "Completed",
+      "queued": "Queued",
+      "ringing": "Ringing",
+      "no-answer": "No answer",
+      "busy": "Busy",
+      "canceled": "Canceled"
+    },
+    "table": {
+      "title": "Recent calls",
+      "subtitle": "Monitor the latest conversations and outcomes.",
+      "refresh": "Refresh",
+      "loading": "Loading calls…",
+      "error": "Unable to load calls. Please try again.",
+      "empty": "No calls recorded yet. Launch a test call to populate this feed.",
+      "unknown": "Unknown",
+      "columns": {
+        "contact": "Contact",
+        "status": "Status",
+        "startedAt": "Started",
+        "duration": "Duration",
+        "cost": "Cost"
+      }
+    }
+  },
+  "analyticsPage": {
+    "title": "Detailed analytics",
+    "subtitle": "Track call volume, sentiment, and key topics in real time to optimise Ava."
+  },
+  "vapi": {
+    "banner": {
+      "title": "⚠️ הגדרות Vapi חסרות",
+      "description": "הגדירו את מפתח ה-API של Vapi.ai כדי ליצור עוזרים קוליים ולנהל שיחות טלפון.",
+      "quickSetup": "הגדרה מהירה (2 דקות)",
+      "goToSettings": "פתיחת הגדרות"
+    },
+    "modal": {
+      "title": "הגדרות Vapi.ai",
+      "subtitle": "בחרו שיטת הגדרה",
+      "quickSetup": {
+        "title": "הגדרה מהירה",
+        "description": "הגדירו את המפתח שלכם כאן ב-2 דקות",
+        "time": "~2 דקות",
+        "guide": "עקבו אחרי 3 השלבים הפשוטים",
+        "step1": "1. צרו חשבון חינם ב-Vapi.ai",
+        "step2": "2. עברו ל-Settings → API Keys",
+        "step3": "3. צרו מפתח חדש והעתיקו אותו"
+      },
+      "settings": {
+        "title": "הגדרות מלאות",
+        "description": "גישה לעמוד Settings עם מדריך מפורט",
+        "more": "אפשרויות נוספות"
+      },
+      "form": {
+        "label": "מפתח API של Vapi"
+      },
+      "openVapi": "פתיחת Vapi Dashboard",
+      "back": "חזרה",
+      "activate": "הפעלת Vapi",
+      "saving": "שומר...",
+      "skip": "דלג לעכשיו",
+      "success": {
+        "title": "✨ ההגדרה הצליחה!",
+        "description": "האינטגרציה עם Vapi.ai פעילה כעת"
+      },
+      "errors": {
+        "emptyKey": "אנא הזינו מפתח API",
+        "invalidFormat": "פורמט מפתח לא תקין",
+        "invalidFormatDesc": "מפתחות Vapi מתחילים ב-'sk_'",
+        "noAuth": "נדרש אימות",
+        "saveFailed": "השמירה נכשלה"
+      }
+    }
+  },
+  "userMenu": {
+    "signedInAs": "מחובר כעת",
+    "profile": "פרופיל"
+  },
+  "settings": {
+    "vapi": {
+      "title": "הגדרות Vapi",
+      "description": "הגדר את האינטגרציה של Vapi.ai עבור עוזרים קוליים",
+      "apiKey": {
+        "label": "מפתח API של Vapi",
+        "placeholder": "הזן את מפתח ה-API של Vapi",
+        "hint": "קבל את המפתח מלוח המחוונים של vapi.ai ← הגדרות ← מפתחות API"
+      },
+      "status": {
+        "connected": "מחובר",
+        "notConfigured": "לא מוגדר",
+        "testing": "בודק חיבור..."
+      },
+      "actions": {
+        "save": "שמור הגדרות",
+        "test": "בדוק חיבור",
+        "delete": "מחק הגדרות",
+        "update": "עדכן מפתח"
+      },
+      "confirm": {
+        "delete": "למחוק את הגדרות Vapi?"
+      },
+      "success": {
+        "saved": "הגדרות Vapi נשמרו בהצלחה",
+        "savedDesc": "המפתח נשמר. כעת ניתן לסנכרן את העוזרים שלך.",
+        "updated": "הגדרות Vapi עודכנו בהצלחה",
+        "deleted": "הגדרות Vapi נמחקו",
+        "connected": "חיבור ל-Vapi.ai הצליח"
+      },
+      "errors": {
+        "emptyKey": "אנא הזן מפתח API",
+        "invalidFormat": "פורמט מפתח API לא תקין",
+        "saveFailed": "שמירה נכשלה",
+        "connectionFailed": "חיבור ל-Vapi.ai נכשל",
+        "deleteFailed": "מחיקה נכשלה"
+      }
+    },
+    "twilio": {
+      "title": "הגדרות Twilio",
+      "description": "הגדר את פרטי הכניסה של Twilio עבור שיחות טלפון",
+      "form": {
+        "accountSid": {
+          "label": "Account SID",
+          "placeholder": "הזן את ה-Account SID של Twilio"
+        },
+        "authToken": {
+          "label": "Auth Token",
+          "placeholder": "הזן את ה-Auth Token של Twilio"
+        },
+        "phoneNumber": {
+          "label": "מספר טלפון",
+          "help": "פורמט בינלאומי: ‎+972501234567‎"
+        }
+      },
+      "accountSid": {
+        "label": "Account SID",
+        "placeholder": "הזן את ה-Account SID של Twilio",
+        "hint": "מצא זאת בקונסולה של Twilio"
+      },
+      "authToken": {
+        "label": "Auth Token",
+        "placeholder": "הזן את ה-Auth Token של Twilio",
+        "hint": "מצא זאת בקונסולה של Twilio"
+      },
+      "phoneNumber": {
+        "label": "מספר טלפון",
+        "placeholder": "+972501234567",
+        "hint": "מספר הטלפון של Twilio עם קוד מדינה"
+      },
+      "status": {
+        "connected": "מחובר",
+        "notConfigured": "לא מוגדר",
+        "testing": "בודק חיבור..."
+      },
+      "actions": {
+        "save": "שמור פרטי כניסה",
+        "test": "בדוק חיבור",
+        "delete": "מחק פרטי כניסה",
+        "update": "עדכן פרטי כניסה"
+      },
+      "success": {
+        "saved": "פרטי הכניסה של Twilio נשמרו בהצלחה",
+        "savedDesc": "ננסה כעת לייבא ולקשר את המספר שלך אוטומטית.",
+        "updated": "פרטי הכניסה של Twilio עודכנו בהצלחה",
+        "deleted": "פרטי הכניסה של Twilio נמחקו",
+        "connected": "חיבור ל-Twilio הצליח"
+      },
+      "import": {
+        "start": "מייבא מספר טלפון…",
+        "startDesc": "מקשר את מספר Twilio שלך לעוזר דרך Vapi.",
+        "guidance": "השלם את הצעדים החסרים ונסה שוב."
+      },
+      "errors": {
+        "emptyFields": "אנא מלא את כל השדות הנדרשים",
+        "invalidPhone": "מספר טלפון לא תקין",
+        "invalidPhoneDesc": "השתמש בפורמט בינלאומי, לדוגמה ‎+33123456789‎.",
+        "invalidAccountSid": "פורמט Account SID לא תקין",
+        "invalidAuthToken": "פורמט Auth Token לא תקין",
+        "invalidPhoneNumber": "פורמט מספר טלפון לא תקין",
+        "saveFailed": "שמירה נכשלה",
+        "connectionFailed": "חיבור ל-Twilio נכשל",
+        "deleteFailed": "מחיקה נכשלה"
+      },
+      "confirm": {
+        "delete": "למחוק את פרטי הכניסה של Twilio?"
+      }
+    }
+  }
+}

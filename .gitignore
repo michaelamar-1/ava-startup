@@ -1,0 +1,29 @@
+# Environnement et secrets
+.env
+.env.*
+*.env
+
+# Logs
+*.log
+logs/
+
+# Fichiers temporaires
+*.tmp
+*.cache
+
+# Dépendances
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,45 @@
+import { AppProviders } from "@/providers/app-providers";
+import { getCurrentSession } from "@/lib/auth/server";
+import { getDirection, isLocale, locales, type Locale } from "@/lib/i18n/locales";
+import { notFound } from "next/navigation";
+import { ReactNode } from "react";
+import { unstable_setRequestLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+
+// Force dynamic rendering (next-intl with headers/cookies requires it)
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+interface LocaleLayoutProps {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+}
+
+export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
+  // 🔥 DIVINE FIX: await params in Next.js 15
+  const { locale: localeParam } = await params;
+  
+  if (!isLocale(localeParam)) {
+    notFound();
+  }
+
+  unstable_setRequestLocale(localeParam);
+
+  const messages = (await import(`@/messages/${localeParam}.json`)).default;
+  const session = await getCurrentSession();
+  const direction = getDirection(localeParam);
+
+  return (
+    <NextIntlClientProvider locale={localeParam} messages={messages} timeZone="UTC">
+      <AppProviders session={session}>
+        <div dir={direction} className="min-h-screen bg-background antialiased">
+          {children}
+        </div>
+      </AppProviders>
+    </NextIntlClientProvider>
+  );
+}

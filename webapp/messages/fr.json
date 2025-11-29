@@ -1,0 +1,960 @@
+{
+  "common": {
+    "appName": "Ava.ai",
+    "tagline": "Votre secrétaire IA, vraiment utile",
+    "cta": {
+      "primary": "Créer mon Ava",
+      "secondary": "Voir la démo",
+      "start": "Commencer"
+    },
+    "nav": {
+      "home": "Accueil",
+      "ava": "Ava Studio",
+      "calls": "Appels",
+      "inbox": "Boîte de réception",
+      "schedules": "Agenda",
+      "integrations": "Intégrations",
+      "phone": "Téléphonie",
+      "billing": "Facturation",
+      "team": "Équipe",
+      "settings": "Paramètres",
+      "logs": "Journal",
+      "contacts": "Contacts"
+    },
+    "status": {
+      "connected": "Connecté",
+      "disconnected": "Déconnecté",
+      "inProgress": "En cours",
+      "actionRequired": "Action requise"
+    }
+  },
+  "nav": {
+    "menu": "Ouvrir la navigation",
+    "search": "Rechercher",
+    "searchPlaceholder": "Rechercher une action, un contact, un appel...",
+    "command": "Recherchez une action, un contact ou une ressource...",
+    "empty": "Aucun résultat. Essayez un autre mot-clé.",
+    "goTo": "Accéder à",
+    "quickActions": "Actions rapides",
+    "login": "Se connecter"
+  },
+  "actions": {
+    "newTestCall": "Lancer un appel test",
+    "newContact": "Créer un contact",
+    "openBilling": "Ouvrir la facturation"
+  },
+  "org": {
+    "switch": "Changer d'organisation",
+    "none": "Sélectionner un workspace",
+    "plan": "Choisir un plan",
+    "search": "Rechercher une organisation",
+    "empty": "Aucune organisation trouvée",
+    "actions": "Actions",
+    "create": "Nouvelle orga"
+  },
+  "auth": {
+    "signOut": "Se déconnecter",
+    "title": "Bienvenue",
+    "subtitle": "Connectez-vous avec un lien magique ou votre fournisseur préféré.",
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous à votre compte",
+      "description": "Accédez à votre compte AVA",
+      "noAccount": "Pas encore de compte ?",
+      "createAccount": "Créer un compte gratuitement"
+    },
+    "fields": {
+      "email": "Email professionnel",
+      "remember": "Rester connecté",
+      "remember_hint": "Garde votre session active pendant 30 jours."
+    },
+    "cta": {
+      "magic": "Envoyer le lien magique"
+    },
+    "magic": {
+      "success": "Lien magique envoyé ! Vérifiez votre boîte mail.",
+      "sent": "Un lien sécurisé a été envoyé à {email}."
+    },
+    "totp": {
+      "title": "Vérifier avec le 2FA",
+      "subtitle": "Entrez le code à 6 chiffres de votre application d'authentification.",
+      "token": "Code d'authentification",
+      "verify": "Vérifier le code",
+      "success": "2FA validé. Redirection...",
+      "back": "Utiliser un autre email"
+    },
+    "or": "Ou continuer avec",
+    "oauth": "Continuer avec {provider}",
+    "policy": "En continuant vous acceptez les Conditions et la Politique de confidentialité d'Ava.ai."
+  },
+  "marketing": {
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "docs": "Docs",
+    "signIn": "Se connecter",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "security": "Sécurité",
+    "product": "Product",
+    "resources": "Resources",
+    "support": "Support",
+    "hero": {
+      "badge": "Assistant vocal IA",
+      "title": "Votre réceptionniste IA",
+      "titleHighlight": "toujours disponible",
+      "subtitle": "Concevez, lancez et gérez un assistant vocal de niveau humain qui accueille les appelants, qualifie les prospects et planifie les rendez-vous en quelques minutes."
+    },
+    "socialProof": {
+      "calls": "100+ appels gérés",
+      "setup": "Configuration en 3 min",
+      "available": "Disponible 24/7"
+    },
+    "cta": {
+      "signup": "Commencer gratuitement",
+      "login": "Se connecter",
+      "primary": "Commencer l'intégration",
+      "secondary": "Parler à un expert"
+    },
+    "taglineFooter": "The AI receptionist that captures every opportunity 24/7.",
+    "fallback": {
+      "badge": "Ava Studio",
+      "title": "Your AI receptionist is always available",
+      "subtitle": "Design, launch, and operate a human-level voice assistant that greets callers, qualifies leads, and schedules appointments in minutes.",
+      "primary": "Start now",
+      "secondary": "Watch the demo",
+      "stats": {
+        "calls": {
+          "value": "99.9%",
+          "label": "Calls answered"
+        },
+        "csat": {
+          "value": "4.9/5",
+          "label": "Satisfaction score"
+        },
+        "setup": {
+          "value": "3 min",
+          "label": "Average setup"
+        }
+      }
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page introuvable",
+      "description": "La page recherchée a été déplacée ou n'existe plus.",
+      "cta": "Retour à l'accueil"
+    }
+  },
+  "onboarding": {
+    "title": "Configurons votre Ava",
+    "subtitle": "Un onboarding guidé avec sauvegarde automatique. Invitez l'équipe ensuite.",
+    "steps": {
+      "profile": {
+        "title": "Profil",
+        "description": "Infos organisation et préférences légales."
+      },
+      "vapi": {
+        "title": "Vapi API",
+        "description": "Configuration plateforme d'assistant vocal."
+      },
+      "ava": {
+        "title": "Persona d'Ava",
+        "description": "Ton, langues et garde-fous."
+      },
+      "twilio": {
+        "title": "Twilio",
+        "description": "Intégration fournisseur téléphonique."
+      },
+      "telephony": {
+        "title": "Téléphonie",
+        "description": "Numéros, routage et sauvegardes."
+      },
+      "integrations": {
+        "title": "Intégrations",
+        "description": "Calendriers, messagerie, CRM et automatisation."
+      },
+      "assistant": {
+        "title": "Assistant",
+        "description": "Créez votre premier assistant IA."
+      },
+      "plan": {
+        "title": "Plan",
+        "description": "Choisissez l'offre et les licences."
+      },
+      "done": {
+        "title": "Lancement",
+        "description": "Relisez le résumé et testez Ava."
+      }
+    },
+    "autosave": "Sauvegarde automatique toutes les 10 secondes. Utilisez ⌘K pour naviguer.",
+    "shortcuts_info": "Utilisez ⌘K pour naviguer rapidement vers n'importe quelle section.",
+    "shortcuts": "Voir les raccourcis",
+    "errors": {
+      "incomplete": "Veuillez remplir les champs requis.",
+      "launch": "Impossible de créer votre assistant. Veuillez réessayer.",
+      "save": "Impossible de sauvegarder pour le moment."
+    },
+    "success": {
+      "launch": "🎉 Bienvenue dans Ava Studio ! Votre assistant est prêt.",
+      "welcome": "🎉 Bienvenue dans Ava Studio ! Finalisez votre configuration pour activer votre assistant."
+    },
+    "actions": {
+      "back": "Retour",
+      "launch": "Lancer Ava",
+      "launching": "Création de votre assistant...",
+      "complete": "Finaliser la configuration",
+      "next": "Continuer",
+      "skip": "Passer pour l'instant"
+    },
+    "pageTitle": "Onboarding d'Ava",
+    "pageSubtitle": "Finalisez les étapes pour lancer Ava. Vous pourrez les revoir dans Ava Studio.",
+    "vapi": {
+      "title": "Configuration Vapi",
+      "description": "Activez les assistants vocaux pour votre entreprise",
+      "continue": "Continuer",
+      "info": "Vapi est requis pour créer des assistants vocaux. Vous pouvez le configurer maintenant ou plus tard dans les Paramètres.",
+      "alreadyConfigured": {
+        "title": "Vapi déjà configuré !",
+        "description": "Votre intégration Vapi.ai est active et prête"
+      },
+      "step1": {
+        "title": "⚡ Configuration Rapide",
+        "description": "Collez votre clé et continuez (2 minutes)",
+        "input": {
+          "label": "Clé API Vapi",
+          "placeholder": "sk_...",
+          "hint": "Obtenez votre clé depuis vapi.ai dashboard → Settings → API Keys"
+        },
+        "save": "Sauvegarder et Continuer",
+        "saving": "Sauvegarde...",
+        "errors": {
+          "required": "Veuillez entrer votre clé API Vapi",
+          "save": "Échec de la sauvegarde de la clé Vapi"
+        },
+        "success": "✅ Vapi configuré avec succès !"
+      },
+      "step2": {
+        "title": "⚙️ Configuration Détaillée",
+        "description": "Guide complet avec captures d'écran et conseils",
+        "action": "Aller aux Paramètres"
+      },
+      "step3": {
+        "title": "⏭️ Passer pour l'instant",
+        "description": "Vous pourrez configurer Vapi plus tard dans les Paramètres",
+        "action": "Passer cette étape",
+        "skipped": "Configuration Vapi ignorée. Vous pourrez l'ajouter plus tard dans les Paramètres."
+      }
+    },
+    "twilio": {
+      "title": "Configuration Twilio",
+      "description": "Connectez des numéros de téléphone à vos assistants",
+      "continue": "Continuer",
+      "hint": "Optionnel : Twilio vous permet de connecter de vrais numéros de téléphone. Vous pouvez passer et l'ajouter plus tard.",
+      "alreadyConfigured": {
+        "title": "Twilio déjà configuré !",
+        "description": "Votre intégration Twilio est active"
+      },
+      "info": {
+        "title": "Pourquoi configurer Twilio ?",
+        "benefit1": "Connecter de vrais numéros de téléphone à vos assistants",
+        "benefit2": "Recevoir et émettre des appels automatiquement",
+        "benefit3": "Contrôle total de votre téléphonie"
+      },
+      "configure": {
+        "action": "Configurer Twilio"
+      },
+      "skip": {
+        "action": "Passer pour l'instant",
+        "message": "Configuration Twilio ignorée. Vous pourrez l'ajouter plus tard dans les Paramètres."
+      }
+    },
+    "assistant": {
+      "title": "Créez Votre Premier Assistant",
+      "description": "Donnons vie à votre assistant IA",
+      "back": "Retour",
+      "blocked": {
+        "title": "Configuration Vapi Requise",
+        "description": "Vous devez configurer Vapi avant de créer un assistant. Veuillez revenir en arrière et compléter l'étape Vapi.",
+        "action": "Retour à Vapi",
+        "vapiRequired": "Vapi doit être configuré pour créer un assistant"
+      },
+      "preview": {
+        "title": "✅ Vapi est configuré !",
+        "description": "Vous êtes prêt à créer votre premier assistant"
+      },
+      "form": {
+        "name": {
+          "label": "Nom de l'Assistant",
+          "placeholder": "ex: Support Client, Agent Commercial...",
+          "hint": "Vous pourrez personnaliser la voix et la personnalité plus tard",
+          "error": "Veuillez entrer un nom d'assistant (au moins 2 caractères)"
+        },
+        "voice": {
+          "label": "Voix",
+          "hint": "Vous pourrez changer la voix plus tard dans les paramètres de l'assistant"
+        },
+        "create": "✨ Créer Mon Assistant",
+        "creating": "Création...",
+        "error": "Échec de la création de l'assistant. Veuillez réessayer."
+      },
+      "defaults": {
+        "instructions": "Vous êtes un assistant IA serviable. Soyez professionnel, amical et concis.",
+        "firstMessage": "Bonjour ! Je suis {name}. Comment puis-je vous aider aujourd'hui ?",
+        "model": "Modèle",
+        "temperature": "Température"
+      },
+      "success": {
+        "created": "🎉 Assistant '{name}' créé avec succès !"
+      }
+    }
+  },
+  "dashboardPage": {
+    "assistants": {
+      "title": "Vos assistantes",
+      "subtitle": "Actives",
+      "loading": "Chargement...",
+      "empty": "Aucune assistante pour le moment",
+      "configure": "Configurer",
+      "alerts": {
+        "notConfigured": "Configuration Vapi introuvable. Ajoutez votre clé API Vapi pour synchroniser les assistantes.",
+        "fetchFailed": "Impossible de charger vos assistantes pour le moment.",
+        "parseFailed": "Réponse inattendue du service assistantes Vapi.",
+        "empty": "Aucune assistante synchronisée pour l'instant."
+      }
+    },
+    "cta": "Ouvrir le studio assistants",
+    "title": "Tableau de bord",
+    "subtitle": "Ravi de vous revoir ! Voici l'activité de vos assistantes Ava.",
+    "loading": "Chargement du tableau de bord...",
+    "error": "Erreur lors du chargement du tableau de bord",
+    "stats": {
+      "totalCalls": "Total d'appels",
+      "activeUsers": "Utilisateurs actifs",
+      "avgDuration": "Durée moyenne",
+      "successRate": "Taux de réussite",
+      "totalCost": "Dépenses"
+    },
+    "statsHelpers": {
+      "totalCalls": "7 derniers jours",
+      "avgDuration": "Minutes par appel",
+      "successRate": "Appels sans escalade",
+      "totalCost": "Période de facturation"
+    },
+    "quick": {
+      "title": "Actions rapides",
+      "viewAnalytics": "Voir les analytics",
+      "manageAssistants": "Gérer les assistantes",
+      "newContact": "Nouveau contact",
+      "testCall": "Appel test"
+    },
+    "activity": {
+      "title": "Vue d'ensemble",
+      "subtitle": "Suivez vos appels et performances en temps réel"
+    },
+    "recent": {
+      "title": "Appels récents",
+      "loading": "Chargement...",
+      "empty": "Aucun appel pour l'instant",
+      "unknownNumber": "Numéro inconnu",
+      "unknownDuration": "Durée indisponible",
+      "unknownTime": "Horaire indisponible",
+      "noTranscript": "Aucun transcript disponible",
+      "viewContact": "Ouvrir la fiche de {name}",
+      "view": "Voir",
+      "send": "Envoyer le transcript",
+      "free": "Gratuit",
+      "toastSuccess": "Transcript envoyé par email !",
+      "toastError": "Impossible d'envoyer le transcript",
+      "seeAll": "Voir tous les appels"
+    }
+  },
+  "assistantsPage": {
+    "hero": {
+      "badge": "Studio assistants",
+      "title": "Créez vos réceptionnistes Ava sur mesure",
+      "subtitle": "{count, plural, =0 {Commencez en créant votre première assistante vocale.} one {{countFormatted} assistante prête à répondre.} other {{countFormatted} assistantes prêtes à répondre.}}",
+      "actions": {
+        "create": "Nouvelle assistante",
+        "library": "Bibliothèque de playbooks"
+      },
+      "metrics": {
+        "total": "{count, plural, =0 {Aucune assistante encore} one {{countFormatted} assistante configurée} other {{countFormatted} assistantes configurées}}"
+      }
+    },
+    "library": {
+      "title": "Bibliothèque d’assistantes",
+      "subtitle": "Basculez entre vos personas et focalisez-en une pour la modifier.",
+      "count": "{count, plural, =0 {Aucune assistante} one {{countFormatted} assistante} other {{countFormatted} assistantes}}",
+      "select": "Ouvrir dans le designer",
+      "active": "Active",
+      "empty": {
+        "title": "Vous n’avez pas encore créé d’assistante",
+        "subtitle": "Créez autant de personas que nécessaire. Chaque assistante peut avoir son ton, son script et sa voix.",
+        "cta": "Créer votre première assistante"
+      },
+      "warnings": {
+        "notConfigured": "Connectez votre compte Vapi pour retrouver vos assistantes existantes.",
+        "fetchFailed": "Impossible de joindre le service des assistantes pour le moment.",
+        "parseFailed": "Le service des assistantes a renvoyé un format inattendu.",
+        "empty": "Vapi n’a renvoyé aucune assistante pour l’instant."
+      },
+      "meta": {
+        "unavailable": "Date de création inconnue"
+      }
+    },
+    "designer": {
+      "title": "Assistant designer",
+      "subtitle": "Affinez persona, script, voix, routage et intégrations pour l’assistante sélectionnée.",
+      "helper": "Sélectionnez une assistante dans la colonne de gauche pour la lier, puis enregistrez afin de pousser les mises à jour vers Vapi et vos appelants."
+    }
+  },
+  "settingsPage": {
+    "movedNotice": {
+      "title": "Où sont les paramètres studio ?",
+      "subtitle": "La création et la personnalisation des assistantes se font désormais depuis la page Assistantes.",
+      "cta": "Accéder au studio des assistantes"
+    },
+    "header": {
+      "title": "Settings",
+      "subtitle": "Manage your personal details and configure your Ava studio."
+    },
+    "tabs": {
+      "profile": "Profile",
+      "studio": "Studio settings",
+      "vapi": "Intégration Vapi",
+      "twilio": "Intégration Twilio",
+      "email": "Emails"
+    },
+    "profile": {
+      "title": "User profile",
+      "description": "Your details appear in notifications and customer communications.",
+      "form": {
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "phonePlaceholder": "+1 415 555 0100",
+        "locale": "Default language"
+      },
+      "actions": {
+        "reset": "Reset",
+        "save": "Save",
+        "saving": "Saving..."
+      },
+      "messages": {
+        "success": "Profile updated successfully",
+        "error": "Unable to update profile",
+        "sessionExpired": "Session expired. Please sign in again."
+      },
+      "errors": {
+        "nameMin": "Name must contain at least 2 characters",
+        "nameMax": "Name cannot exceed 100 characters",
+        "email": "Please enter a valid email",
+        "phone": "Provide an international number (+1 ...)",
+        "locale": "Please select a language"
+      }
+    },
+    "studio": {
+      "title": "Studio settings",
+      "description": "Define your organisation identity and Ava personality.",
+      "refresh": "Refresh",
+      "loading": "Loading studio configuration…",
+      "error": "We couldn't load the configuration. Please try again.",
+      "form": {
+        "organizationName": "Organization name",
+        "adminEmail": "Admin email",
+        "timezone": "Timezone",
+        "language": "Primary language",
+        "persona": "Ava persona",
+        "tone": "Voice tone",
+        "guidelines": "Instructions & guidelines",
+        "phoneNumber": "Main number",
+        "businessHours": "Business hours",
+        "fallbackEmail": "Fallback email",
+        "summaryEmail": "Summary email",
+        "smtpServer": "SMTP server",
+        "smtpPort": "SMTP port",
+        "smtpUsername": "SMTP username",
+        "smtpPassword": "SMTP password"
+      },
+      "smtpDescription": "Configure the sender for automated reports and notifications.",
+      "actions": {
+        "reset": "Reset",
+        "save": "Save",
+        "saving": "Saving..."
+      },
+      "messages": {
+        "success": "Studio configuration updated successfully",
+        "error": "Unable to save configuration"
+      },
+      "errors": {
+        "required": "Please fill in this field",
+        "email": "Enter a valid email"
+      },
+      "options": {
+        "timezone": {
+          "europe/paris": "Europe / Paris",
+          "america/new_york": "America / New York",
+          "asia/tokyo": "Asia / Tokyo"
+        },
+        "language": {
+          "fr": "French",
+          "en": "English",
+          "es": "Spanish"
+        },
+        "persona": {
+          "secretary": "Executive assistant",
+          "concierge": "Premium concierge",
+          "sdr": "Sales development",
+          "cs": "Customer success"
+        },
+        "tone": {
+          "warm": "Warm",
+          "professional": "Professional",
+          "energetic": "Energetic"
+        }
+      }
+    },
+    "vapi": {
+      "title": "Configuration Vapi.ai",
+      "subtitle": "Configurez votre clé API Vapi.ai personnelle pour activer les assistantes vocales IA",
+      "status": {
+        "configured": "✅ Configuré",
+        "notConfigured": "⚠️ Non configuré",
+        "notConfiguredDesc": "Ajoutez votre clé API pour débloquer les fonctionnalités Vapi",
+        "keyPreview": "Clé"
+      },
+      "form": {
+        "label": "Clé API Vapi",
+        "description": "Votre clé API Vapi.ai personnelle (commence par sk_)",
+        "save": "Sauvegarder",
+        "saving": "Enregistrement...",
+        "delete": "Supprimer"
+      },
+      "guide": {
+        "title": "Comment obtenir votre clé API ?",
+        "step1": "Allez sur vapi.ai et créez un compte gratuit",
+        "step2": "Accédez à Paramètres → Clés API",
+        "step3": "Cliquez sur 'Créer une nouvelle clé API'",
+        "step4": "Copiez et collez la clé ci-dessus",
+        "goToVapi": "Ouvrir le Dashboard Vapi"
+      },
+      "benefits": {
+        "scalable": "Infiniment Scalable",
+        "secure": "Sécurisé & Privé",
+        "unlimited": "Sans Limites"
+      },
+      "success": {
+        "saved": "Clé API sauvegardée !",
+        "savedDesc": "Votre intégration Vapi.ai est maintenant active",
+        "deleted": "Clé API supprimée",
+        "deletedDesc": "Les fonctionnalités Vapi ont été désactivées",
+        "copied": "Lien copié dans le presse-papier !"
+      },
+      "errors": {
+        "emptyKey": "Veuillez entrer une clé API",
+        "invalidFormat": "Clé API invalide",
+        "invalidFormatDesc": "Votre clé API Vapi doit contenir au moins 10 caractères",
+        "noAuth": "Authentification requise",
+        "saveFailed": "Échec de la sauvegarde de la clé API",
+        "saveFailedDesc": "Veuillez réessayer",
+        "deleteFailed": "Échec de la suppression de la clé API"
+      },
+      "confirm": {
+        "delete": "Êtes-vous sûr de vouloir supprimer votre clé API Vapi ? Cela désactivera toutes les fonctionnalités Vapi."
+      }
+    },
+    "twilio": {
+      "title": "Configuration Twilio",
+      "description": "Configurez vos identifiants Twilio personnels pour connecter des numéros de téléphone",
+      "status": {
+        "configured": "✅ Configuré",
+        "notConfigured": "⚠️ Non configuré"
+      },
+      "currentConfig": {
+        "title": "Configuration actuelle",
+        "accountSid": "Account SID",
+        "phoneNumber": "Numéro de téléphone"
+      },
+      "guide": {
+        "title": "Comment obtenir vos identifiants Twilio ?",
+        "step1": "Créez un compte gratuit sur twilio.com",
+        "step2": "Allez dans Console → Compte → Clés API & Tokens",
+        "step3": "Copiez votre Account SID et Auth Token",
+        "openTwilio": "Ouvrir Console Twilio"
+      },
+      "form": {
+        "accountSid": "Account SID",
+        "authToken": "Auth Token",
+        "phoneNumber": "Numéro Twilio",
+        "optional": "Optionnel",
+        "save": "Enregistrer les identifiants",
+        "saving": "Enregistrement...",
+        "delete": "Supprimer les identifiants",
+        "deleting": "Suppression..."
+      },
+      "benefits": {
+        "scalable": {
+          "title": "Infiniment Scalable",
+          "description": "Votre propre compte Twilio, numéros illimités"
+        },
+        "secure": {
+          "title": "Sécurisé & Privé",
+          "description": "Vos identifiants, stockés en sécurité dans votre base de données"
+        },
+        "unlimited": {
+          "title": "Sans Limites",
+          "description": "Achetez et gérez autant de numéros que vous voulez"
+        }
+      },
+      "success": {
+        "credentialsSaved": "Identifiants Twilio enregistrés !",
+        "credentialsDeleted": "Identifiants Twilio supprimés"
+      },
+      "errors": {
+        "missingFields": "Veuillez remplir tous les champs requis",
+        "invalidAccountSid": "L'Account SID doit commencer par 'AC'",
+        "invalidPhoneFormat": "Le numéro doit être au format E.164 (ex: +33612345678)",
+        "saveFailed": "Échec de l'enregistrement des identifiants Twilio",
+        "deleteFailed": "Échec de la suppression des identifiants Twilio"
+      },
+      "confirmDelete": "Êtes-vous sûr de vouloir supprimer vos identifiants Twilio ? Cela désactivera les fonctionnalités de numéros de téléphone."
+    }
+  },
+  "sidebarNav": {
+    "dashboard": "Tableau de bord",
+    "assistants": "Assistants",
+    "contacts": "Contacts",
+    "calls": "Calls",
+    "profile": "Profil"
+  },
+  "sidebarTip": {
+    "title": "🎯 Astuce",
+    "body": "Appuyez sur ⌘K pour ouvrir la palette de commandes et naviguer plus vite."
+  },
+  "contactsPage": {
+    "title": "Contacts",
+    "subtitle": "{contacts} contacts • {calls} appels au total",
+    "searchPlaceholder": "Rechercher par nom ou numéro...",
+    "sort": {
+      "recent": "Dernier appel",
+      "frequent": "Plus d'appels",
+      "oldest": "Premier contact"
+    },
+    "email": {
+      "title": "Envoi d’emails avec votre domaine",
+      "description": "Faites partir les transcripts et notifications depuis votre boîte Google Workspace ou Outlook.",
+      "status": {
+        "connected": "Expéditeur authentifié",
+        "missing": "Configuration requise",
+        "caption": "Utilisez un mot de passe applicatif ou SMTP OAuth pour autoriser Ava."
+      },
+      "form": {
+        "fallbackEmail": "Destinataire de secours",
+        "summaryEmail": "Destinataire des résumés quotidiens",
+        "smtpTitle": "Identifiants SMTP",
+        "providerHint": "Utilisez le relais SMTP de votre workspace (Google, Microsoft 365, Fastmail…)",
+        "smtpServer": "Serveur SMTP",
+        "smtpPort": "Port SMTP",
+        "smtpUsername": "Utilisateur SMTP",
+        "smtpPassword": "Mot de passe / App password"
+      },
+      "actions": {
+        "save": "Enregistrer l’expéditeur",
+        "reset": "Réinitialiser"
+      },
+      "messages": {
+        "success": "Paramètres email sauvegardés",
+        "error": "Impossible de sauvegarder les paramètres email"
+      },
+      "errors": {
+        "email": "Entrez une adresse valide",
+        "port": "Le port doit être numérique",
+        "smtpIncomplete": "Renseignez serveur, port, utilisateur et mot de passe applicatif."
+      },
+      "guides": {
+        "google": {
+          "title": "Google Workspace / Gmail",
+          "description": "Activez le relais SMTP avec un mot de passe applicatif dédié.",
+          "linkLabel": "Ouvrir Google Admin",
+          "steps": {
+            "step1": "Allez dans Google Admin → Sécurité → Mots de passe des applications (ou https://myaccount.google.com/apppasswords).",
+            "step2": "Générez un mot de passe pour “Mail” et copiez le code à 16 caractères.",
+            "step3": "Utilisez smtp.gmail.com port 587, identifiant = adresse email complète, mot de passe = code généré.",
+            "step4": "Vérifiez que le relais SMTP / applications moins sécurisées est autorisé pour ce compte."
+          }
+        },
+        "outlook": {
+          "title": "Microsoft 365 / Outlook",
+          "description": "Activez l’envoi SMTP authentifié pour votre boîte partagée.",
+          "linkLabel": "Consulter la documentation Microsoft",
+          "steps": {
+            "step1": "Dans le centre d’administration Microsoft 365 → Utilisateurs → sélectionnez la boîte.",
+            "step2": "Activez “SMTP authentifié” dans Mail → Applications courrier puis enregistrez.",
+            "step3": "Utilisez smtp.office365.com port 587, identifiant = email de la boîte, mot de passe = mot de passe du compte ou app password.",
+            "step4": "Si MFA est activée, créez un mot de passe d’application depuis https://portal.office.com/account/#security."
+          }
+        }
+      }
+    },
+    "card": {
+      "callCount": "{count, plural, one {# appel} other {# appels}}",
+      "averageDuration": "Durée moyenne",
+      "totalDuration": "Durée totale",
+      "lastContact": "Dernier contact",
+      "unknownDate": "Date inconnue",
+      "unknownDuration": "—",
+      "unknownNumber": "Numéro inconnu"
+    },
+    "detail": {
+      "back": "Retour aux contacts",
+      "badge": "Profil contact",
+      "unknownPhone": "Numéro indisponible",
+      "alias": {
+        "add": "Ajouter un nom",
+        "edit": "Modifier le nom",
+        "remove": "Supprimer le nom",
+        "save": "Enregistrer",
+        "cancel": "Annuler",
+        "placeholder": "Prénom et nom"
+      },
+      "metrics": {
+        "callCount": "Appels",
+        "totalDuration": "Durée totale",
+        "averageDuration": "Durée moyenne",
+        "lastCall": "Dernier appel",
+        "firstCall": "Premier appel",
+        "unknown": "—"
+      },
+      "timeline": {
+        "title": "Historique des appels",
+        "subtitle": "{count, plural, one {# appel enregistré} other {# appels enregistrés}}",
+        "empty": "Aucun appel enregistré pour ce contact pour le moment.",
+        "viewTranscript": "Voir le transcript",
+        "hideTranscript": "Masquer le transcript",
+        "loadingTranscript": "Chargement du transcript...",
+        "noTranscript": "Aucun transcript disponible pour cet appel.",
+        "unknownDate": "Date inconnue",
+        "unknownDuration": "—",
+        "unknownCost": "Coût inconnu",
+        "unknownAssistant": "Assistant inconnu",
+        "free": "Gratuit",
+        "delete": "Supprimer l'appel",
+        "deleting": "Suppression…",
+        "deleteSuccess": "Appel supprimé",
+        "deleteError": "Impossible de supprimer l'appel",
+        "loadMore": "Afficher les appels plus anciens"
+      },
+      "notFound": {
+        "title": "Ce contact n'est pas encore disponible",
+        "subtitle": "Enregistrez un appel ou actualisez pour synchroniser les dernières activités."
+      }
+    },
+    "emptyTitle": "Aucun contact pour le moment",
+    "emptyDescription": "Vos contacts apparaîtront ici dès que vous commencerez à recevoir des appels."
+  },
+  "localeSwitcher": {
+    "ariaLabel": "Change language",
+    "active": "Active"
+  },
+  "callsPage": {
+    "title": "Calls",
+    "subtitle": "{count} calls analysed • New calls stream in real time",
+    "searchPlaceholder": "Search by phone, transcript, or ID...",
+    "statusPlaceholder": "Filter by status",
+    "duration": "{minutes}m {seconds}s",
+    "unknownNumber": "Unknown number",
+    "noTranscript": "No transcript available",
+    "empty": "No calls match this filter.",
+    "status": {
+      "any": "All statuses",
+      "in-progress": "In progress",
+      "ended": "Ended",
+      "failed": "Failed",
+      "completed": "Completed",
+      "queued": "Queued",
+      "ringing": "Ringing",
+      "no-answer": "No answer",
+      "busy": "Busy",
+      "canceled": "Canceled"
+    },
+    "table": {
+      "title": "Recent calls",
+      "subtitle": "Monitor the latest conversations and outcomes.",
+      "refresh": "Refresh",
+      "loading": "Loading calls…",
+      "error": "Unable to load calls. Please try again.",
+      "empty": "No calls recorded yet. Launch a test call to populate this feed.",
+      "unknown": "Unknown",
+      "columns": {
+        "contact": "Contact",
+        "status": "Status",
+        "startedAt": "Started",
+        "duration": "Duration",
+        "cost": "Cost"
+      }
+    }
+  },
+  "analyticsPage": {
+    "title": "Detailed analytics",
+    "subtitle": "Track call volume, sentiment, and key topics in real time to optimise Ava."
+  },
+  "vapi": {
+    "banner": {
+      "title": "⚠️ Configuration Vapi manquante",
+      "description": "Configurez votre clé API Vapi.ai pour créer des assistants vocaux et gérer vos appels téléphoniques.",
+      "quickSetup": "Configuration rapide (2 min)",
+      "goToSettings": "Ouvrir les paramètres"
+    },
+    "modal": {
+      "title": "Configuration Vapi.ai",
+      "subtitle": "Choisissez votre méthode de configuration",
+      "quickSetup": {
+        "title": "Configuration Rapide",
+        "description": "Configurez votre clé Vapi ici en 2 minutes",
+        "time": "~2 minutes",
+        "guide": "Suivez ces 3 étapes simples",
+        "step1": "1. Créez un compte gratuit sur Vapi.ai",
+        "step2": "2. Allez dans Settings → API Keys",
+        "step3": "3. Créez une nouvelle clé et copiez-la"
+      },
+      "settings": {
+        "title": "Paramètres Complets",
+        "description": "Accédez à la page Settings avec le guide détaillé",
+        "more": "Plus d'options"
+      },
+      "form": {
+        "label": "Clé API Vapi"
+      },
+      "openVapi": "Ouvrir Dashboard Vapi",
+      "back": "Retour",
+      "activate": "Activer Vapi",
+      "saving": "Enregistrement...",
+      "skip": "Passer pour l'instant",
+      "success": {
+        "title": "✨ Configuration réussie !",
+        "description": "Votre intégration Vapi.ai est maintenant active"
+      },
+      "errors": {
+        "emptyKey": "Veuillez entrer une clé API",
+        "invalidFormat": "Clé API invalide",
+        "invalidFormatDesc": "Votre clé API Vapi doit contenir au moins 10 caractères",
+        "noAuth": "Authentification requise",
+        "saveFailed": "Échec de la sauvegarde"
+      }
+    }
+  },
+  "userMenu": {
+    "signedInAs": "Connecté en tant que",
+    "profile": "Profil"
+  },
+  "settings": {
+    "vapi": {
+      "title": "Configuration Vapi",
+      "description": "Configurez votre intégration Vapi.ai pour les assistants vocaux",
+      "apiKey": {
+        "label": "Clé API Vapi",
+        "placeholder": "Entrez votre clé API Vapi",
+        "hint": "Obtenez votre clé depuis le tableau de bord vapi.ai → Paramètres → Clés API"
+      },
+      "status": {
+        "connected": "Connecté",
+        "notConfigured": "Non configuré",
+        "testing": "Test de connexion..."
+      },
+      "actions": {
+        "save": "Enregistrer la configuration",
+        "test": "Tester la connexion",
+        "delete": "Supprimer la configuration",
+        "update": "Mettre à jour la clé"
+      },
+      "confirm": {
+        "delete": "Supprimer la configuration Vapi ?"
+      },
+      "success": {
+        "saved": "Configuration Vapi enregistrée avec succès",
+        "savedDesc": "Votre clé API est sauvegardée. Vous pouvez maintenant synchroniser vos assistants.",
+        "updated": "Configuration Vapi mise à jour avec succès",
+        "deleted": "Configuration Vapi supprimée",
+        "connected": "Connecté avec succès à Vapi.ai"
+      },
+      "errors": {
+        "emptyKey": "Veuillez entrer une clé API",
+        "invalidFormat": "Format de clé API invalide",
+        "saveFailed": "Échec de l'enregistrement",
+        "connectionFailed": "Échec de la connexion à Vapi.ai",
+        "deleteFailed": "Échec de la suppression"
+      }
+    },
+    "twilio": {
+      "title": "Configuration Twilio",
+      "description": "Configurez vos identifiants Twilio pour les appels téléphoniques",
+      "form": {
+        "accountSid": {
+          "label": "Account SID",
+          "placeholder": "Entrez votre Account SID Twilio"
+        },
+        "authToken": {
+          "label": "Auth Token",
+          "placeholder": "Entrez votre Auth Token Twilio"
+        },
+        "phoneNumber": {
+          "label": "Numéro de téléphone",
+          "help": "Format international : +33123456789 (E.164)"
+        }
+      },
+      "accountSid": {
+        "label": "Account SID",
+        "placeholder": "Entrez votre Twilio Account SID",
+        "hint": "Trouvez ceci dans votre Console Twilio"
+      },
+      "authToken": {
+        "label": "Auth Token",
+        "placeholder": "Entrez votre Twilio Auth Token",
+        "hint": "Trouvez ceci dans votre Console Twilio"
+      },
+      "phoneNumber": {
+        "label": "Numéro de téléphone",
+        "placeholder": "+33123456789",
+        "hint": "Votre numéro Twilio avec l'indicatif pays"
+      },
+      "status": {
+        "connected": "Connecté",
+        "notConfigured": "Non configuré",
+        "testing": "Test de connexion..."
+      },
+      "actions": {
+        "save": "Enregistrer les identifiants",
+        "test": "Tester la connexion",
+        "delete": "Supprimer les identifiants",
+        "update": "Mettre à jour les identifiants"
+      },
+      "success": {
+        "saved": "Identifiants Twilio enregistrés avec succès",
+        "savedDesc": "Nous allons importer et lier votre numéro automatiquement.",
+        "updated": "Identifiants Twilio mis à jour avec succès",
+        "deleted": "Identifiants Twilio supprimés",
+        "connected": "Connecté avec succès à Twilio"
+      },
+      "import": {
+        "start": "Import du numéro en cours…",
+        "startDesc": "Association de votre numéro Twilio à l’assistant via Vapi.",
+        "guidance": "Complétez l’étape manquante puis relancez l’import."
+      },
+      "errors": {
+        "emptyFields": "Veuillez remplir tous les champs requis",
+        "invalidPhone": "Numéro invalide",
+        "invalidPhoneDesc": "Utilisez le format international, ex. +33123456789.",
+        "invalidAccountSid": "Format Account SID invalide",
+        "invalidAuthToken": "Format Auth Token invalide",
+        "invalidPhoneNumber": "Format de numéro invalide",
+        "saveFailed": "Échec de l'enregistrement",
+        "connectionFailed": "Échec de la connexion à Twilio",
+        "deleteFailed": "Échec de la suppression"
+      },
+      "confirm": {
+        "delete": "Supprimer les identifiants Twilio ?"
+      }
+    }
+  }
+}
