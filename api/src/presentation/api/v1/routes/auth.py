@@ -19,6 +19,8 @@ from api.src.infrastructure.database.session import get_session
 from api.src.infrastructure.persistence.repositories.user_repository import UserRepository
 from api.src.infrastructure.persistence.models.user import User
 from api.src.presentation.dependencies.auth import get_current_user
+from api.src.infrastructure.email.email_service import get_email_service
+from sqlalchemy import select
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -94,6 +96,11 @@ class LoginRequest(BaseModel):
 class RefreshTokenRequest(BaseModel):
     """Refresh token request"""
     refresh_token: str
+
+
+class MagicLinkRequest(BaseModel):
+    """Request pour magic link."""
+    email: EmailStr
 
 
 class TokenResponse(BaseModel):
@@ -481,3 +488,136 @@ async def verify_phone(phone: str, code: str):
         status_code=status.HTTP_501_NOT_IMPLEMENTED,
         detail="Phone verification not yet implemented"
     )
+
+
+@router.post("/magic-link/send")
+async def send_magic_link(
+    request: MagicLinkRequest,
+    session: AsyncSession = Depends(get_session),
+):
+    """
+    Envoie un magic link par email pour connexion sans password.
+    
+    Le token expire après 15 minutes.
+    Pour la sécurité, retourne toujours succès même si l'email n'existe pas.
+    """
+    # Vérifier que l'user existe
+    query = select(User).filter(User.email == request.email)
+    result = await session.execute(query)
+    user = result.scalar_one_or_none()
+    
+    # Pour la sécurité : ne pas révéler si l'email existe
+    # Toujours retourner le même message
+    success_message = {
+        "success": True,
+        "message": "Si un compte existe avec cet email, un lien de connexion a été envoyé."
+    }
+    
+    if not user:
+        # Email n'existe pas, mais on ne le dit pas
+        import logging
+        logger = logging.getLogger("ava.auth")
+        logger.info(f"Magic link requested for non-existent email: {request.email}")
+        return success_message
+    
+    # Créer un token JWT de courte durée (15min)
+    magic_token_payload = {
+        "sub": user.email,
+        "type": "magic_link",
+        "user_id": str(user.id),
+        "exp": datetime.utcnow() + timedelta(minutes=15)
+    }
+    magic_token = jwt.encode(magic_token_payload, SECRET_KEY, algorithm=ALGORITHM)
+    
+    # Envoyer l'email
+    email_service = get_email_service()
+    email_sent = await email_service.send_magic_link(
+        to_email=user.email,
+        magic_token=magic_token
+    )
+    
+    if not email_sent:
+        # En dev sans SMTP, c'est OK (juste loggé)
+        # En prod, c'est une vraie erreur
+        if email_service.smtp_user and email_service.smtp_password:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Échec de l'envoi de l'email. Réessayez dans quelques instants."
+            )
+    
+    return success_message
+
+
+@router.get("/magic-link/verify")
+async def verify_magic_link(
+    token: str,
+    session: AsyncSession = Depends(get_session),
+):
+    """
+    Vérifie un magic link token et connecte l'utilisateur.
+    
+    Retourne access_token et refresh_token pour la session.
+    """
+    import logging
+    logger = logging.getLogger("ava.auth")
+    
+    # Vérifier le token
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        
+        # Vérifier que c'est bien un magic link token
+        if payload.get("type") != "magic_link":
+            raise ValueError("Not a magic link token")
+        
+        email = payload.get("sub")
+        if not email:
+            raise ValueError("Missing email in token")
+        
+    except jwt.ExpiredSignatureError:
+        logger.warning("Expired magic link token")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Lien de connexion expiré. Demandez-en un nouveau."
+        )
+    except Exception as e:
+        logger.warning(f"Invalid magic link token: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Lien de connexion invalide ou expiré"
+        )
+    
+    # Récupérer l'utilisateur
+    query = select(User).filter(User.email == email)
+    result = await session.execute(query)
+    user = result.scalar_one_or_none()
+    
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Utilisateur introuvable"
+        )
+    
+    # Créer les tokens de session (longue durée)
+    access_token_payload = {
+        "sub": user.email,
+        "user_id": str(user.id),
+        "exp": datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    }
+    access_token = jwt.encode(access_token_payload, SECRET_KEY, algorithm=ALGORITHM)
+    
+    refresh_token_payload = {
+        "sub": user.email,
+        "user_id": str(user.id),
+        "exp": datetime.utcnow() + timedelta(days=REFRESH_TOKEN_EXPIRE_DAYS)
+    }
+    refresh_token = jwt.encode(refresh_token_payload, SECRET_KEY, algorithm=ALGORITHM)
+    
+    logger.info(f"✅ Magic link verified successfully for {user.email}")
+    
+    # Retourner les tokens + user info
+    return {
+        "access_token": access_token,
+        "refresh_token": refresh_token,
+        "token_type": "bearer",
+        "user": serialize_user(user)
+    }

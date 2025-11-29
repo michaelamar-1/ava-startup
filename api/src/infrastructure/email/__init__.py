@@ -1,5 +1,4 @@
-"""Email infrastructure"""
+"""Email infrastructure module."""
+from api.src.infrastructure.email.email_service import EmailService, get_email_service
 
-from api.src.infrastructure.email.email_service import get_email_service, EmailService
-
-__all__ = ["get_email_service", "EmailService"]
+__all__ = ["EmailService", "get_email_service"]
