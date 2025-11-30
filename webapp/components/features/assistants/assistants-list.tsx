@@ -204,7 +204,8 @@ export function AssistantsList() {
                     Voir
                   </Link>
                 </Button>
-                <Button asChild variant="default" size="sm" className="flex-1">
+                {/* CORRECTION ICI : variant="primary" au lieu de "default" */}
+                <Button asChild variant="primary" size="sm" className="flex-1">
                   <Link href={`/fr/app/assistants/${assistant.id}/edit`}>
                     Modifier
                   </Link>
