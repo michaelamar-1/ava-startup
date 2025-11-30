@@ -159,7 +159,7 @@ export function AssistantsList() {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {assistant.model?.provider && (
-                      <Badge variant="secondary" className="text-xs">
+                      <Badge variant="neutral" className="text-xs">
                         {assistant.model.provider === "openai" && "🤖"}
                         {assistant.model.provider === "anthropic" && "🧠"}
                         {assistant.model.provider === "google" && "🔍"}
@@ -167,7 +167,7 @@ export function AssistantsList() {
                       </Badge>
                     )}
                     {assistant.voice?.provider && (
-                      <Badge variant="secondary" className="text-xs">
+                      <Badge variant="neutral" className="text-xs">
                         🎙️ {assistant.voice.voiceId ?? assistant.voice.provider}
                       </Badge>
                     )}
@@ -217,4 +217,4 @@ export function AssistantsList() {
     </div>
   );
 }
-
+```
