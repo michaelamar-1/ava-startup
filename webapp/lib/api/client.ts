@@ -107,14 +107,17 @@ async function singleFlightRefresh(): Promise<string | null> {
     clientLogger.error("🚨 Max refresh retries exceeded, forcing logout NOW");
     
     // Clear all auth state
-    if (typeof window !== "undefined") {
-      localStorage.removeItem("access_token");
-      localStorage.removeItem("refresh_token");
-      sessionStorage.clear();
-      
-      // Force redirect (no async, no delays)
-      window.location.replace("/login?reason=session_expired");
-    }
+  if (typeof window !== "undefined") {
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("refresh_token");
+    sessionStorage.clear();
+    
+    // Extract locale from URL or default to 'fr'
+    const locale = window.location.pathname.split('/')[1] || 'fr';
+    
+    // Force redirect (no async, no delays)
+    window.location.replace(`/${locale}/login?reason=session_expired`);
+  }
     return null;
   }
 
@@ -311,7 +314,9 @@ export async function apiFetch(input: string, options: ApiRequestOptions = {}): 
       if (!newToken) {
         clientLogger.error("❌ Token refresh failed, redirecting to login");
         if (typeof window !== "undefined") {
-          window.location.href = "/login?reason=session_expired";
+          // Extract locale from URL or default to 'fr'
+          const locale = window.location.pathname.split('/')[1] || 'fr';
+          window.location.href = `/${locale}/login?reason=session_expired`;
         }
         return response;
       }

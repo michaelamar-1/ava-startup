@@ -111,7 +111,7 @@ export function VapiStep({ form, onNext }: VapiStepProps) {
           </div>
         </div>
         <div className="flex justify-end">
-          <Button type="button" onClick={onNext} size="lg">
+          <Button type="button" onClick={() => onNext?.()} size="lg">
             {t("continue")}
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

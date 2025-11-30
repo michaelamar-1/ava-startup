@@ -8,6 +8,7 @@ import { GlassCard } from "@/components/ui/glass-card";
 import { Badge } from "@/components/ui/badge";
 import { StudioSettingsForm } from "@/components/features/settings/studio-settings-form";
 import { VapiSetupBanner } from "@/components/features/vapi/vapi-setup-banner";
+import { AssistantsList } from "@/components/features/assistants/assistants-list";
 import { useVapiStatus } from "@/lib/hooks/use-vapi-status";
 import type { StudioConfigInput } from "@/lib/validations/config";
 
@@ -67,6 +68,11 @@ export function AssistantsStudio() {
 
       {/* Vapi Setup Banner - Only show if user doesn't have a key */}
       {!isLoadingVapi && !hasVapiKey && <VapiSetupBanner />}
+
+      {/* Liste des assistants Vapi */}
+      {!isLoadingVapi && hasVapiKey && (
+        <AssistantsList />
+      )}
 
       <div className="space-y-6">
         <StudioSettingsForm
