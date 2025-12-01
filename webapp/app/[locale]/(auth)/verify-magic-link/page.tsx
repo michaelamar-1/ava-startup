@@ -35,7 +35,13 @@ export default function VerifyMagicLinkPage() {
 
   const verifyToken = async (token: string) => {
     try {
-      const response = await fetch(`/api/auth/magic-link/verify?token=${encodeURIComponent(token)}`);
+      const response = await fetch(`https://ava-startup-production.up.railway.app/api/v1/auth/magic-link/verify?token=${encodeURIComponent(token)}`, {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  }
+});
       const data = await response.json();
 
       if (response.ok) {
